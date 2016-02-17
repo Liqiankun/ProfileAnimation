@@ -1,4 +1,4 @@
-![](https://github.com/Liqiankun/Profile/raw/master/ProfileAnimation.gif)
+![](https://github.com/Liqiankun/ProfileAnimation/raw/master/ProfileAnimation.gif)
 # How to use
 ```oc
 -(void)tapAction
