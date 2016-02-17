@@ -48,18 +48,18 @@
 
 -(void)begainAnimating
 {
+    //获取当前Window
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    [window addSubview:self];
+    
+    //开始动画
     CGFloat windowWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat windowHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat profileY = (windowHeight - windowWidth) / 2;
     [UIView animateWithDuration:0.5 animations:^{
         self.alpha = 1.0;
-        //self.profileImageView.transform = CGAffineTransformMakeScale(windowWidth / self.originRect.size.width, windowWidth / self.originRect.size.height);
-        //self.profileImageView.transform = CGAffineTransformMakeTranslation( 0 - self.originRect.origin.x, profileY - self.originRect.origin.y);
         self.profileImageView.frame = CGRectMake(0, profileY, windowWidth, windowWidth);
 
-    } completion:^(BOOL finished) {
-        //self.profileImageView.transform = CGAffineTransformMakeScale(0, 0);
-        //self.profileImageView.transform = CGAffineTransformMakeTranslation(0, 0);
     }];
 }
 
